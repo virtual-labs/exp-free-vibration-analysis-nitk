@@ -1,1 +1,1 @@
-## Experiment name
+## Free Vibration Analysis of Two degree of Freedom System
