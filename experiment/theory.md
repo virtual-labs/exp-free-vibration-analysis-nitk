@@ -105,7 +105,7 @@ x<sub>1</sub> = X'<sub>1</sub> cos(&omega;<sub>n1</sub>t) and x<sub>2</sub> = X'
 </center>
 Where,
 
-![](images/12.png)
+![](images/12.png)  
 
 2. 	When we give same initial excitation for both masses in different direction (i.e., X<sub>o1</sub> = -X<sub>o2</sub>), then the system will vibrate in larger natural frequency (i.e.&omega;<sub>n2</sub> ). Then the condition changes as:
 <center> X''<sub>2</sub> = X<sub>o2</sub> 
