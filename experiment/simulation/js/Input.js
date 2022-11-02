@@ -8,7 +8,7 @@ class NumberInput {
         this.iniVal = iniVal;
         this.ifSlider = ifSlider;
         this.inp=this.iniVal
-        this.w = 160;
+        this.w = 145;
         this.initialised = true;
         this.input1;
         this.input2;
@@ -20,7 +20,7 @@ initialise() {
         if (this.initialised) {
             this.input1 = createInput(this.inp);
             this.input1.size(60, 20);
-            this.input1.position(this.x + this.w - 60, this.y-15);
+            this.input1.position(this.x + this.w - 40, this.y-15);
 
             this.input1.elt.setAttribute("type", "number");
             this.input1.elt.setAttribute("min", this.min.toString());

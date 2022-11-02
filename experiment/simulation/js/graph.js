@@ -28,9 +28,6 @@ class Graph {
     draw(r, g, b)  {
         push();
         let temp_y=[]; 
-        
-
-        
         beginShape();
         stroke(r, g, b);
         strokeWeight(2);
