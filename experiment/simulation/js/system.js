@@ -25,43 +25,47 @@ class System  {
 
     initialise(_x1, _x2, _k1,_m1 ,_k2 ,_m2)  {
         
-        this.x1 = _x1*1000;
-        this.x2 = _x2*1000;
-        this.k1 = _k1/100;
+        this.x1 = _x1*500;
+        this.x2 = _x2*500;
+        this.k1 = _k1;
         this.m1 = _m1;
-        this.k2 = _k2/100;
+        this.k2 = _k2;
         this.m2 = _m2;
         this.term1 = Math.pow(((this.k1*this.m2)+(this.k2*this.m2)+(this.m1*this.k2)+(this.m1*this.k3))/(this.m1*this.m2),2);
         this.term2 = ((this.k1*this.k2)+(this.k1*this.k3)+(this.k2*this.k3))/(this.m1*this.m2);
         this.term3 = ((this.k1*this.m2)+(this.k2*this.m2)+(this.m1*this.k2)+(this.m1*this.k3))/(this.m1*this.m2);
         this.det = Math.pow((this.term1-(4*this.term2)),0.5);
-        this.w2 = Math.pow((this.term3 + this.det)/2,0.5);
-        this.w1 = Math.pow((this.term3 - this.det)/2,0.5);
-        this.ar1= this.k2/(this.k1+this.k2-(this.m1*Math.pow(this.w1,2)));
-        this.ar2= this.k2/((this.k1+this.k2)-(this.m1*Math.pow(this.w2,2)));
-        // finding x1 and x2(equation of motion)
-        this.x2d=(this.x1-(this.ar2*this.x2))/(this.ar1-this.ar2);
-        this.x2dd=((this.ar1*this.x2)-this.x1)/(this.ar1-this.ar2);
-        this.x1d=this.ar1*this.x2d;
-        this.x1dd=this.ar2*this.x2dd;
+      //  this.w2 = Math.pow((this.term3 + this.det)/2,0.5);
+      //  this.w1 = Math.pow((this.term3 - this.det)/2,0.5);
+
+        this.w1 = Math.pow((this.k2 + 2*this.k1)/this.m1 , 0.5);
+        this.w2 = Math.pow((this.k2/this.m2) , 0.5);
+        this.ar1= -this.k2/(this.k1+this.k2-(this.m1*Math.pow(this.w1,2)));
+        this.ar2= -this.k2/((this.k1+this.k2)-(this.m1*Math.pow(this.w2,2)));
+        
+        
+        this.x2d=(this.x1-(this.ar2*this.x2))/(this.ar1-this.ar2)*2;
+        this.x2dd=((this.ar1*this.x2)-this.x1)/(this.ar1-this.ar2)*2;
+        this.x1d=this.ar1*this.x2d*2;
+        this.x1dd=this.ar2*this.x2dd*2;
     }
 
     update(t, _mulfact)  {
         //this.fi = atan((-2*this.z*this.w / this.wn) / (1 - (this.w*this.w)/(this.wn*this.wn)));
         if(this.x1==this.x2){
         
-            this.y2 = -(_mulfact*this.x2 * Math.cos(this.w1*t*10));
+            this.y2 = -(_mulfact*this.x2 * Math.cos(this.w1*t));
             
-            this.y1 = -(_mulfact*this.ar1*this.x1*Math.cos(this.w1*t*10));  
+            this.y1 = -(_mulfact*this.ar1*this.x1*Math.cos(this.w1*t));  
         }
         else if(this.x1==-(this.x2)){
-            this.y2 = -(_mulfact*this.x2 * Math.cos(this.w2*t*10));
-            this.y1 = (_mulfact*this.ar2*this.x1 * Math.cos(this.w2*t*10)); 
+            this.y2 = -(_mulfact*this.x2 * Math.cos(this.w2*t));
+            this.y1 = (_mulfact*this.ar2*this.x1 * Math.cos(this.w2*t)); 
             
         }
         else{
-        this.y2 = -(_mulfact*this.x2d * Math.cos(this.w1*t*10))-(_mulfact*this.x2dd * Math.cos(this.w2*t*10));
-        this.y1 = -(_mulfact*this.x1d * Math.cos(this.w1*t*10))-(_mulfact*this.x1dd * Math.cos(this.w2*t*10));
+        this.y2 = -(_mulfact*this.x2d * Math.cos(this.w1*t))-(_mulfact*this.x2dd * Math.cos(this.w2*t));
+        this.y1 = -(_mulfact*this.x1d * Math.cos(this.w1*t))-(_mulfact*this.x1dd * Math.cos(this.w2*t));
         }
     }
 
@@ -98,7 +102,7 @@ class System  {
         textSize(15)
         text("k1",this.x_equilibrium - (wid/2)-30, this.y_equilibrium -12.5 -(hei/2) +this.y1+10)
         image(spr, this.x_equilibrium -(wid/2), this.y_equilibrium -12.5-25 -(2*hei) + this.y2 +10, wid, hei-this.y2 + this.y1)
-        // console.log(this.y_equilibrium -12.5-164 -(2*hei) +this.y2+this.y1+10,hei+this.y1);
+        console.log(this.y_equilibrium -12.5-164 -(2*hei) +this.y2+this.y1+10,hei+this.y1);
         fill(0,0,0)
         textSize(15)
         text("k2",this.x_equilibrium -(wid/2)-30, this.y_equilibrium -12.5-25 -(1.5*hei) + this.y2 +10)

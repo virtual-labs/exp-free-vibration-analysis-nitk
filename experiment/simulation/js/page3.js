@@ -22,7 +22,10 @@
     strokeWeight(0.5);
     line(45,300,590,300);
     line(45,400,590,400);
-    if(spring1.x1==spring1.x2){
+
+    if(spring1.x1==spring1.x2)
+    {
+
     textFont("Comic Sans MS");
     textSize(20);
     text("MODE SHAPE", 250, 110);
@@ -42,6 +45,7 @@
 
     }
     else if(spring1.x1==(-spring1.x2)){
+
         textFont("Comic Sans MS");
         textSize(20);
         text("MODE SHAPE", 250, 110);
@@ -61,6 +65,7 @@
     
         }
     else{
+        
     textFont("Comic Sans MS");
     textSize(20);
     text("MODE SHAPES", 215, 110);
