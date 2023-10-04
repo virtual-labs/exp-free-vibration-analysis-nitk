@@ -1,0 +1,90 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Systems that require two independent coordinates to describe their motion are called:",
+      "answers": {
+        "a": "single DOF",
+        "b": "two DOF",
+        "c": "Multiple DOF",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "For the two DOF free vibration without damping:",
+      "answers": {
+        "a": "the masses are excited by harmonic force F(t)",
+        "b": "the masses are excited by impulse excitation",
+        "c": "the masses are excited by initial excitation",
+        "d": "none of the above"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Under certain condition, any point in the system may execute harmonic vibrations at any of the two natural frequencies, and these are known as:",
+      "answers": {
+        "a": "principal mode of vibrations",
+        "b": "star mode of vibrations",
+        "c": "Secondary mode of vibrations",
+        "d": "Tertiary mode of vibrations"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "A system having two degrees of freedom can vibrate in:",
+      "answers": {
+        "a": "one principal modes of vibrations",
+        "b": "two principal modes of vibrations",
+        "c": "three principal modes of vibrations",
+        "d": "multiple principal modes of vibrations"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The guess solution regarding the solutions for x1 and x2 in 2 DOF free vibrations are:",
+      "answers": {
+        "a": "x<sub>1</sub> = X<sub>1</sub> sin &omega;t ; x<sub>2</sub> = X<sub>2</sub> sin &omega;t",
+        "b": "&theta;<sub>1</sub> = &beta;<sub>1</sub> sin &omega;t ; &theta;<sub>2</sub> = &beta;<sub>2</sub> sin &omega;t",
+        "c": " x<sub>1</sub> = A<sub>1</sub> e<sup>st</sup> ; x<sub>2</sub> = A<sub>2</sub> e<sup>st</sup> ",
+        "d": "x = X sin &omega;t ; &theta; = &beta; sin &omega;t"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+  ]
+}
