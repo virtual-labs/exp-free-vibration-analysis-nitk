@@ -8,7 +8,6 @@
 <ol>
 <li>Mechanical Vibrations (Singiresu S. Rao, Philip Griffin)</li>
 <li>G K Grover - Mechanical Vibrations (2015, Nem Chand & Bros.) </li>
-
 </ol>
 </td>
 <td>Developer : Dr. K V Gangadharan | NITK</br></br>
