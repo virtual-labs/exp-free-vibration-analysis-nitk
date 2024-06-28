@@ -1,32 +1,23 @@
-## Assumptions
-•	The springs have no masses.
-<br>
-•	No dampers are provided.
+### Procedure
 
-## Description
+<div style="text-align:left">
+  Click on the Simulation icon <img src="images/simulation.png" alt="Alt text" style="height:80px; width:80px;">  to view the simulation. 
 
-1.	At first page, the page will be displayed as shown below:
+   ![Alt text](images\Screen1.png)
+   
+   In order to view the variable section click on the Variable icon. <img src="images/var1.png" alt="Alt text" style="height:80px; width:80px;">
 
-![](images/Procedure/1.png)
+   ![Alt text](images/variable11.png)
 
-<br>
-2. Change the values of initial excitation given to masses m<sub>1</sub> and m<sub>2</sub> (X<sub>o1</sub> and X<sub>o2</sub>). So that, the motion of masses will be initiated to the input given.
+   Click on Play icon <img src="images/play1.png" alt="Alt text" style="height:80px; width:80px;"> to run the simulation and click on Pause icon <img src="images/pause.png" alt="Alt text" style="height:80px; width:80px;"> to stop it.
 
-![](images/Procedure/2.png)
-<br>
+   Click on the Next icon  <img src="images/next2.png" alt="Alt text" style="height:80px; width:80px;"> to go further.  
 
-3.	You can change the stiffness constants k<sub>1</sub> and k<sub>2</sub>, value of masses m<sub>1</sub> and m<sub>2</sub> according to your convenience and can check the output response of system.
+   ![Alt text](images/screen2.png)
 
-4. You can pause the animation by clicking the  ![](images/Procedure/3.png)  button.
+   Click on the Next or Prev icon<img src="images/prenex.png" alt="Alt text" style="height:80px; width:80px;"> to cycle through different pages. 
 
-5.	To play the animation again, click ![](images/Procedure/4.png)   button.
-
-6.	If you want to check the values of natural frequencies, their respective mode shape ratios and equation of motion of masses m<sub>1</sub> and m<sub>2</sub>, you can click  ![](images/Procedure/5.png)  button. The representation of second page is shown below:
-
-![](images/Procedure/6.png)
-
-7.	If you want to go back, Click ![](images/Procedure/7.png)   button.
-
-8.	If you want to go further to see the mode shapes of system, Click ![](images/Procedure/8.png)   button. The representation of third page is shown below.
-
-![](images/Procedure/9.png)
+   ![Alt text](images/vibrationlastscreen.png)
+click on the result icon to view the result.<img src="images/result.png" alt="Alt text" style="height:80px; width:80px;"> 
+![Alt text](images/Result2.png)
+</div>

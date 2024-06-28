@@ -19,15 +19,7 @@ let J;
 let position_graph1;
 let position_graph2;
 let magFac;
-//let force_graph;
-//let magFac;
-//let phaseAng;
 
-// inputs
-//let slider_force;
-//let slider_ang_freq;
-let k1;
-let k2;
 let M;
 let w;
 let F0;
@@ -59,35 +51,64 @@ let touch = false;
 // Buttons
 let clear;
 
+
+let page=0;
 function preload() {
-  play = loadImage("images/blueplaydull.png");
-  pause = loadImage("images/bluepausedull.png");
-  graph = loadImage("images/bluefwddulls.png");
-  back = loadImage("images/bluebkdulls.png");
-  bg = loadImage("images/frame_copper_ver02.png");
+ 
   rider = loadImage("images/ride.png");
   spr = loadImage("images/spring.png");
   spr2 = loadImage("images/spr2.png");
+  // console.log("hello page one")
+  document.getElementById('variables').style.display = "none";
+  document.getElementById('Results').style.display = "block";
+  $('#variables1').css({
+    "opacity": 0.5,
+    "pointer-events": "none"
+  });
+  $('#Results1').css({
+    "opacity": 1,
+    "pointer-events": "auto"
+  });
+  document.getElementById("taskResult").innerHTML= "Description";
+  document.getElementById("taskResult1").innerHTML= "Description";
+  page=0;
+
+
+  document.querySelector(".graph-two").classList.remove("display-hide");
+  document.querySelector(".graph-one").classList.add("display-hide");
+document.querySelector(".graph-div span").textContent = "Next";
+$('#p1, #p2, #p3,#p4,#p5,#p6').each(function() {
+  // Perform actions on each element
+  $(this).css('display', 'block');
+});
+$('#p7, #p8, #p9,#p10').each(function() {
+   
+  $(this).css('display', 'none');
+});
+  
+
+
 }
 
+
 function setup() {
-  console.log("hello");
 
-  textFont("Comic Sans MS");
 
-  createCanvas(width, height);
+  var sketchCanvas = createCanvas(600, 450);
+  sketchCanvas.parent("canvas-container");
+
   spring1 = new System(450, 365, 90, 25);
 
-  position_graph1 = new Graph(50, 295, 100, 220, "x1", "t");
+  position_graph1 = new Graph(50, 295, 100, 220, "x\u2081", "t");
 
-  position_graph2 = new Graph(50, 210, 100, 220, "x2", "t");
+  position_graph2 = new Graph(50, 210, 100, 220, "x\u2082", "t");
 
   magFac1 = new DynamicGraph(
     50,
     400,
     300,
     220,
-    "X1/Xst",
+    "X/Xst",
     "ω/ω2",
     0,
     7,
@@ -109,22 +130,21 @@ function setup() {
     System.mag_func2
   );
 
-  //magFac = new DynamicGraph(125, 325, 230, 290, "Magnification Factor", "n", 0, 2.5, 0, 7.5, System.mag_func);
-  //phaseAng = new DynamicGraph(125, 495, 150, 290, "Phase Angle", "n", 0, 2.5, 0, 180, System.phase_func);
+ 
 
-  x1 = new NumberInput(620, 140, "Xo1(m)", -0.03, 0.03, 0.016, 0.001, 1, true); //(x, y, label, min, max, iniVal, change,fine_change, ifSlider)
-  x2 = new NumberInput(620, 190, "Xo2(m)", -0.03, 0.03, 0.016, 0.001, 1, true);
-  k1 = new NumberInput(620, 240, "k1 (N/m)", 500, 2000, 500, 2, 1, true);
-  m1 = new NumberInput(620, 290, "m1(kg)", 10, 50, 10, 1, 1, true);
-  k2 = new NumberInput(620, 340, "k2 (N/m)", 500, 2000, 500, 2, 1, true);
-  m2 = new NumberInput(620, 380, "m2(kg)", 10, 50, 10, 1, 1, true);
-  button0 = new Button(665, 470, graph);
-  button1 = new Button(675, 430, pause);
-  button2 = new Button(736, 430, graph);
-  button3 = new Button(645, 430, back);
-  button4 = new Button(705, 430, graph);
-  button5 = new Button(645, 430, back);
-  button6 = new Button(615, 430, back);
+
+  
+
+  varinit();
+  x1 = $("#Xo1Spinner").spinner("value");
+  x2 = $("#Xo2Spinner").spinner("value");
+  k1 = $("#k1Spinner").spinner("value");
+  m1= $("#m1Spinner").spinner("value");
+  k2= $("#k2Spinner").spinner("value");
+  m2= $("#m2Spinner").spinner("value");
+
+
+ 
 }
 
 function draw() {
@@ -143,8 +163,186 @@ function draw() {
     runPage3();
   }
 }
+function simstate() {
+  var imgfilename = document.getElementById("playpausebutton").src;
+  imgfilename = imgfilename.substring(
+    imgfilename.lastIndexOf("/") + 1,
+    imgfilename.lastIndexOf(".")
+  );
 
-function mousePressed() {
-  console.log(mouseX, mouseY);
-  handleEvents();
+  if (animation) {
+    noLoop();
+    animation = false;
+    document.getElementById("playpausebutton").src = "images/blueplaydull.svg";
+    document.querySelector(".playPause").textContent = "Play";
+  } else {
+    loop();
+    animation = true;
+    document.getElementById("playpausebutton").src = "images/bluepausedull.svg";
+    document.querySelector(".playPause").textContent = "Pause";
+  }
 }
+
+
+
+function updateContent() {
+
+
+  if (page === 0) {
+ 
+
+    $('#variables1').css({
+      "opacity": 0.5,
+      "pointer-events": "none"
+    });
+    $('#Results1').css({
+      "opacity": 1,
+      "pointer-events": "auto"
+    });
+    document.getElementById('Results').style.display = "block";
+    document.getElementById('playpausebutton').style.display = "none";
+    $(".playPause").css("display","none");
+    page0=true;
+    page1=false;
+    page2=false;
+    page3=false;
+    runPage0();
+    // console.log("hello page one")
+    document.querySelector(".graph-two").classList.remove("display-hide");
+    document.querySelector(".graph-one").classList.add("display-hide");
+    document.querySelector(".graph-div span").textContent = "Next";
+    document.getElementById('variables').style.display = "none";
+
+    $('#p1, #p2, #p3,#p4,#p5,#p6').each(function() {
+      // Perform actions on each element
+      $(this).css('display', 'block');
+
+  });
+  $('#p7, #p8, #p9,#p10').each(function() {
+   
+    $(this).css('display', 'none');
+});
+    
+document.getElementById("taskResult").innerHTML= "Description";
+  document.getElementById("taskResult1").innerHTML= "Description";
+
+
+
+  } else if (page === 1) {
+
+    $('#variables1').css({
+      "opacity": 1,
+      "pointer-events": "auto"
+    });
+    $('#Results1').css({
+      "opacity": 1,
+      "pointer-events": "auto"
+    });
+    $("#Results").css("width","100%");
+    document.getElementById('Results').style.display = "block";
+
+    document.getElementById('variables').style.display = "block";
+    document.getElementById('playpausebutton').style.display = "block";
+    $(".playPause").css("display","block");
+    page = 1;
+    document.querySelector(".graph-one").classList.remove("display-hide");
+    document.querySelector(".graph-two").classList.remove("display-hide");
+    document.querySelector(".graph-div span").textContent = "Prev/Next";
+    $('#p1, #p2, #p3,#p4,#p5,#p6').each(function() {
+ 
+      $(this).css('display', 'none');
+  });
+  $('#p7, #p8, #p9,#p10').each(function() {
+   
+    $(this).css('display', 'block');
+});
+document.getElementById("taskResult").innerHTML= "Result";
+document.getElementById("taskResult1").innerHTML= "Result";
+   
+    page0=false;
+    page1=true;
+    page2=false;
+    page3=false;
+    runPage1();
+   
+
+  }else if (page === 2) {
+    $('#variables1').css({
+      "opacity": 1,
+      "pointer-events": "auto"
+    });
+    $('#Results1').css({
+      "opacity": 0.5,
+      "pointer-events": "none"
+    });
+    document.getElementById('Results').style.display = "none";
+    document.getElementById('variables').style.display = "block";
+    document.getElementById('playpausebutton').style.display = "none";
+    $(".playPause").css("display","none");
+    $('#p1, #p2, #p3,#p4,#p5,#p6').each(function() {
+    
+      $(this).css('display', 'none');
+  });
+  $('#p7, #p8, #p9,#p10').each(function() {
+   
+    $(this).css('display', 'none');
+});
+    page0=false;
+    page1=false;
+    page2=true;
+    page3=false;
+    runPage2();
+    document.querySelector(".graph-one").classList.remove("display-hide");
+    document.querySelector(".graph-two").classList.remove("display-hide");
+    document.querySelector(".graph-div span").textContent = "Prev/Next";
+  } 
+
+  
+   else if (page === 3) {
+    $('#variables1').css({
+      "opacity": 1,
+      "pointer-events": "auto"
+    });
+    $('#Results1').css({
+      "opacity": 0.5,
+      "pointer-events": "none"
+    });
+    let colors = color("#089b93");
+    document.getElementById('Results').style.display = "none";
+    document.getElementById('variables').style.display = "block";
+    document.getElementById('playpausebutton').style.display = "none";
+    $(".playPause").css("display","none");
+    $('#p1, #p2, #p3,#p4,#p5,#p6').each(function() {
+   
+      $(this).css('display', 'none');
+  });
+  $('#p7, #p8, #p9,#p10').each(function() {
+   
+    $(this).css('display', 'none');
+});
+    page0=false;
+    page1=false;
+    page2=false;
+    page3=true;
+    runPage3();
+    document.querySelector(".graph-one").classList.remove("display-hide");
+    document.querySelector(".graph-two").classList.add("display-hide");
+    document.querySelector(".graph-div span").textContent = "Prev";
+  } 
+
+
+}
+
+
+function changePage(direction) {
+  page += direction;
+  updateContent();
+}
+
+
+updateContent();
+
+
+$(window).resize(function() {
+  updateContent();
+});
