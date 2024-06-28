@@ -1,14 +1,14 @@
 function runPage0() {
     background(255);
-    image(bg, 0, 0)
+    // image(bg, 0, 0)
     stroke(0);
     fill(0);
 
     push();
     textSize(36);
     // textFont("Times");
-    textFont("Comic Sans MS")
-    text('Two Degree of Freedom System',150, 50);
+    textFont("nunito")
+    // text('Two Degree of Freedom System',150, 50);
 
     textSize(16);
     text("CONTROLS", 655, 417);
@@ -29,16 +29,17 @@ function runPage0() {
     image(rider, 20, 150)
     image(spr2, 450, 200)
     textSize(14);
-    textFont("Comic Sans MS")
+    textFont("nunito")
     fill(0,0,0);
     // stroke(0,0,0);
+
     text('Fig 1. A motorcycle with rider', 80, 400);
     text('(a)', 180, 420);
     text('(b)', 475, 420);
 
 
     textSize(14);
-    textFont("Comic Sans MS")
+    textFont("nunito")
     fill(231, 114, 43);
     stroke(231, 114, 43);
     strokeWeight(0.5);    
@@ -76,5 +77,32 @@ function runPage0() {
     text("(b) Mathematical model as ", 380, 520);
     text("2 DOF system", 390, 540);
 
-    button0.draw();
+
+textFont('Nunito')
+textSize(26);
+fill(0);
+stroke(0);
+strokeWeight(0.5);
+text('Diagram',250,90)
+strokeWeight(1);
+ line(250,95,350,95);
+// $('#Results').html("description");
+document.getElementById("taskResult").innerHTML= "Description";
+document.getElementById("taskResult1").innerHTML= "Description";
+document.getElementById('Title-results').title = 'Description';
+    function adjustCommentsWidth() {
+        if ($(window).width() < 944) {
+          $('#Results').css('width', '100%');
+        } else {
+       
+          $('#Results').css('width', '200%');
+     
+        }
+      }
+      
+      
+      adjustCommentsWidth();
+      
+      $(window).resize(adjustCommentsWidth);
+//  movetoTop();
 }

@@ -1,0 +1,291 @@
+/* rem and em don not depend on html font size in media queries, Instead 1rem = 1em = 16px
+rem: root font size
+em:current font size
+*/
+
+/* *************only screen******* */
+
+/* **************************** */
+/* Below 1344px (Smaller Desktops) */
+/* **************************** */
+
+@media (max-width: 84em) {
+}
+
+/* **************************** */
+/* Below 1200px (Lanscape Tablets) */
+/* **************************** */
+
+@media (max-width: 75em) {
+  body {
+    width: 100%;
+    margin: unset;
+  }
+  .title-div h1 {
+    font-size: 2.5rem;
+  }
+  .task-title {
+    font-size: 2rem;
+  }
+  .tool-menu {
+    font-size: 2rem;
+  }
+  .icons {
+    width: 4rem;
+    height: 4rem;
+  }
+  .ctrl-icons {
+    width: 3rem;
+    height: 3rem;
+  }
+  .canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+  }
+  .div__control img {
+    width: 3rem;
+    height: 2.8rem;
+  }
+  .btn-top{
+ visibility: visible;
+  }
+}
+
+/* **************************** */
+/* Below 944px ( Tablets) */
+/* **************************** */
+
+@media (max-width: 59em) {
+  .tool-link:link,
+  .tool-link:visited {
+    gap: 0.5rem;
+    font-size: 1.4rem;
+    flex-direction: column;
+  }
+
+  .title-div h1 {
+    font-size: 2rem;
+  }
+
+  .main__task-div {
+    height: auto;
+  }
+
+  .sidebar {
+    position: fixed;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+    flex-direction: row;
+    width: 100%;
+    backdrop-filter: blur(10rem);
+    z-index: 101;
+    justify-content: space-evenly;
+    border-radius: 0;
+    scroll-behavior: auto;
+  }
+  .tool-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    font-size: 2.4rem;
+    justify-content: space-evenly;
+    padding: 1rem;
+  }
+  .main-section {
+    grid-template-columns: 1fr;
+  }
+  .logo-div {
+    width: 6.5rem;
+  }
+  .icons {
+    width: 3rem;
+    height: 3rem;
+  }
+  .main__task-div:nth-child(4) {
+    margin-bottom: 6rem;
+  }
+  .canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* background-color: red; */
+  }
+  .main-section {
+    grid-template-columns: 1fr;
+  }
+  .canvas__div {
+    grid-template-columns: 1fr;
+  }
+  .canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none;
+    border-top: 1px solid rgba(177, 176, 176, 0.855);
+  }
+  .footer {
+    margin-bottom: 7rem;
+  }
+  .btn-top{
+   visibility: hidden;
+  }
+}
+
+/* **************************** */
+/* Below 820px (Smaller Tablets) */
+/* **************************** */
+@media (max-width: 48em) {
+  .main-section {
+    grid-template-columns: 1fr;
+  }
+  .canvas__div {
+    grid-template-columns: 1fr;
+  }
+  .canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-top: 1px solid rgba(177, 176, 176, 0.855);
+  }
+}
+
+/* **************************** */
+/* Below 704px (Smaller Tablets) */
+/* **************************** */
+@media (max-width: 44em) {
+  .canvas__div {
+    grid-template-columns: 1fr;
+  }
+  .img-div {
+    flex-direction: column;
+  }
+  .title-div {
+    gap: 0rem;
+    text-align: center;
+  }
+  .round {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+  .logo-div {
+    width: 8.5rem;
+    /* padding: 0.8rem 0 0.8rem 3.3rem; */
+  }
+  .main__task-div:nth-child(4) {
+    margin-bottom: 6rem;
+  }
+  .circuit-dia {
+    width: 40%;
+  }
+  .cross-img {
+    width: 60%;
+  }
+  .canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-top: 1px solid rgba(177, 176, 176, 0.855);
+  }
+}
+
+@media (max-width: 37.5em) {
+  canvas {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* **************************** */
+/* Below 540px (Smaller Tablets) */
+/* **************************** */
+@media (max-width: 34em) {
+  .title-div-container {
+    padding: 0.5rem 0.5rem 0rem 0.5rem;
+  }
+  .container {
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+
+  .title-div h1 {
+    padding: 0.2rem;
+
+    font-size: 1.6rem;
+    /* text-align: center; */
+  }
+  .div__control {
+    gap: 2rem;
+    /* top: 1.8rem;
+    right: 1.5rem; */
+  }
+  .ctrl-icons {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .task-title {
+    font-size: 1.7rem;
+  }
+  label,
+  select,
+  input,
+  p {
+    display: inline-block;
+    font-size: 1.5rem;
+  }
+  .main {
+    gap: 0.5rem;
+  }
+  .main-section {
+    gap: 0.5rem;
+  }
+  .sidebar {
+    border-radius: 0;
+  }
+  .canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-top: 1px solid rgba(177, 176, 176, 0.855);
+    /* background-color: red; */
+  }
+  .div__control img {
+    width: 2.7rem;
+    height: 2.5rem;
+  }
+  .tooltip {
+    font-size: 1rem;
+  }
+  #main__task-div {
+    height: 400px;
+    width: 550px;
+    margin-top: 65px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 27em) {
+  .tool-menu {
+    gap: 1rem;
+    font-size: 1rem;
+  }
+  .tool-list span {
+    font-size: 1.3rem;
+  }
+}
+/* 
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+ */
