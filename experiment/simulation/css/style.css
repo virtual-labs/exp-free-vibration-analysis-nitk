@@ -99,6 +99,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 .tool-list span {
   display: inline-block;
@@ -353,7 +354,8 @@ h1 {
 }
 
 .input-container label {
-  margin-left: -5rem;
+  margin-left: 4rem;
+
 }
 .input-container span + span {
   margin-right: 4rem;
