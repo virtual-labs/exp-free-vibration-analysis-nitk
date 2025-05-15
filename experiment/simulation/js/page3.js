@@ -1,4 +1,6 @@
 ﻿function runPage3() {
+  document.querySelector("#observations").style.display = "none";
+  document.querySelector("#canvas-container").style.display = "block";
   background(255);
   // image(bg, 0, 0);
 

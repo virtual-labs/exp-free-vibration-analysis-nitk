@@ -10,6 +10,7 @@ em:current font size
 /* **************************** */
 
 @media (max-width: 84em) {
+  
 }
 
 /* **************************** */
@@ -48,8 +49,8 @@ em:current font size
     width: 3rem;
     height: 2.8rem;
   }
-  .btn-top{
- visibility: visible;
+  .btn-top {
+    visibility: visible;
   }
 }
 
@@ -72,8 +73,7 @@ em:current font size
   .main__task-div {
     height: auto;
   }
-
-  .sidebar {
+ .sidebar {
     position: fixed;
     padding: 0;
     bottom: 0;
@@ -85,6 +85,10 @@ em:current font size
     justify-content: space-evenly;
     border-radius: 0;
     scroll-behavior: auto;
+    margin: 0;
+  }
+  .main {
+    grid-column: 1/-1;
   }
   .tool-menu {
     list-style: none;
@@ -131,8 +135,8 @@ em:current font size
   .footer {
     margin-bottom: 7rem;
   }
-  .btn-top{
-   visibility: hidden;
+  .btn-top {
+    visibility: hidden;
   }
 }
 
@@ -210,8 +214,8 @@ em:current font size
     padding: 0.5rem 0.5rem 0rem 0.5rem;
   }
   .container {
-    padding: 0.5rem;
-    gap: 1rem;
+    padding: 0.25rem;
+    gap: 0.5rem;
   }
 
   .title-div h1 {

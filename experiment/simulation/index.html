@@ -112,29 +112,11 @@ jquery.ui.touch-punch.min.js"
       type="text/javascript"
       src="js/page3.js"
     ></script>
-    <!-- <script
-    language="javascript"
-    type="text/javascript"
-    src="js/event_handling.js"
-  ></script> -->
-
-    <!-- <script
-      language="javascript"
-      type="text/javascript"
-      src="js/event_handling.js"
-    ></script> -->
-
-    <!-- <style>
-      @media (max-width: 600px) {
-        canvas {
-          width: 100%;
-          height: auto;
-        }
-      }
-    </style> -->
+   
   </head>
 
   <body>
+    <div class="container">
     <div class="title-div-container">
       <div class="title-div">
         <div class="logo-div">
@@ -142,10 +124,9 @@ jquery.ui.touch-punch.min.js"
             ><img src="images/logo_nitk.png" alt="Logo" class="logo"
           /></a>
         </div>
-        <h1>Two Degree of Freedom System</h1>
+        <h1>Free Vibration Analysis of 2 DOF Undamped System</h1>
       </div>
     </div>
-    <div class="container">
       <div class="sidebar">
         <ul class="tool-menu">
           <li class="tool-list">
@@ -261,14 +242,22 @@ jquery.ui.touch-punch.min.js"
                 <!-- <canvas id="simscreen" height="400px" width="550px"></canvas> -->
               </div>
               <!-- <button id="cleargraph" onclick="clearMe()" ontouchstart="clearMe()">Clear graph</button>            -->
-              <div id="titleincanvas"></div>
-              <div id="datatable1"></div>
+              <!-- <div id="titleincanvas"></div> -->
+              <div id="observations">
+                <p class="ob1"></p>
+                <p class="ob2"></p>
+                <p class="ob3"></p>
+                <p class="ob4"></p>
+                <p class="ob5"></p>
+                <p class="ob6"></p>
+              </div>
+              <!-- <div id="datatable1"></div>
               <div id="datatable2"></div>
-              <div id="scale"></div>
+              <div id="scale"></div> -->
 
               <!-- Region for comment / question prompts -->
-              <div id="commentboxleft"></div>
-              <div id="commentboxright"></div>
+              <!-- <div id="commentboxleft"></div>
+              <div id="commentboxright"></div> -->
             </div>
           </div>
           <div id="variables" class="main__task-div">
@@ -377,15 +366,15 @@ jquery.ui.touch-punch.min.js"
             <h3 id="taskResult" class="task-title">Results</h3>
             <div class="settings-sections">
               <div class="comment-sections">
-                <p id="p1">m<sub>v</sub> = is the mass of the vehicle</p>
-                <p id="p2">m<sub>r</sub> = is the mass of the rider</p>
-                <p id="p3">m<sub>w</sub> = is the mass of the wheel</p>
+                <p id="p1">m<sub>v</sub> is the mass of the vehicle</p>
+                <p id="p2">m<sub>r</sub> is the mass of the rider</p>
+                <p id="p3">m<sub>w</sub> is the mass of the wheel</p>
                 <p id="p4">
                   k<sub>s</sub> and k<sub>t</sub> are the stiffness of the strut
                   and tire
                 </p>
                 <p id="p5">(a) A Physical Model</p>
-                <p id="p6">(b)Mathematical Model as 2 DOF System</p>
+                <p id="p6">(b) Mathematical Model as 2 DOF System</p>
 
                 <p id="p7">ω<sub>1</sub> = <span id="w1"></span></p>
                 <p id="p8">ω<sub>2</sub> = <span id="w2"></span></p>
