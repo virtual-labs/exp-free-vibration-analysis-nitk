@@ -1,1 +1,1 @@
-## Free Vibration Analysis of Two degree of Freedom System
+## Free Vibration Analysis of 2 DOF Undamped System

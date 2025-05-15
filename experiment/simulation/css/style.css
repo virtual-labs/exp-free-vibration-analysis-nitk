@@ -1,5 +1,9 @@
-.main-container {
-  background-color: var(--clr-body-clr);
+.container {
+  background-color: var(--clr-container-clr);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  max-height: 100vh;
 }
 .title-div-container {
   width: 100%;
@@ -7,7 +11,8 @@
   background-color: var(--clr-container-clr);
   z-index: 105;
   position: relative;
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  padding: 0.25rem;
+  grid-column: 1/-1;
 }
 
 .title-div {
@@ -40,21 +45,15 @@ h1 {
   font-size: 3.2rem;
   color: var(--clr-text-clr);
   text-transform: uppercase;
+  align-self: center;
+  text-align: center;
 }
-.container {
-  padding: 0 0.5rem 0.5rem 0.5rem;
-  display: flex;
-  flex-direction: row;
-  background-color: var(--clr-container-clr);
-  /* height: 100vh; */
-  gap: 0.5rem;
-}
+
 /* ********************** */
 /* *******SIDEBAR******* */
 /* ********************** */
 
 .sidebar {
-  /* background-color: gray; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,8 +61,10 @@ h1 {
   background-color: #fffcfc;
   box-shadow: 0 1rem 1rem 0 rgba(177, 176, 176, 0.855);
   padding: 1.2rem 1.6rem;
+  margin: 0 0.25rem;
   border-radius: 0.9rem;
   left: 0;
+  cursor: pointer;
 }
 
 .logo-div {
@@ -125,7 +126,13 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 0 0.25rem;
+  margin-bottom: 0;
+  border-radius: 0.9rem;
 }
+
 
 .task-title {
   font-size: 1.8rem;
@@ -143,20 +150,17 @@ h1 {
 
 .main-section {
   display: grid;
-  /* grid-template-columns: repeat(2, 1fr); */
   grid-template-columns: 50fr 50fr;
   gap: 0.5rem;
   overflow-y: auto;
+  overflow-x: hidden;
   scroll-behavior: smooth;
-  /* padding: 0 1rem 0 0; */
 }
 
 .main__task-div {
-  position: relative;
   width: 100%;
   background-color: #ffffffc9;
   border-radius: 0.9rem;
-  /* padding: 1.5rem; */
   max-height: 100%;
   font-size: 1.6rem;
   border: 0.5rem solid var(--clr-text-clr);
@@ -302,6 +306,20 @@ h1 {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+#observations{
+  grid-column:1/-1;
+  padding: 1rem 1rem 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#observations p {
+  /* font-size: 2rem; */
+  /* color: var(--clr-title-background); */
+  margin-bottom: 2rem;
 }
 
 #graphscreen1,
