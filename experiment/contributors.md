@@ -6,21 +6,16 @@
 | :--: | :-----------------: | :-------: | :----------------------------------: |
 |  1   | Dr. K V Gangadharan |   NITK    | Department of Mechanical Engineering |
 
-### Lab Developers:
 
-| SNo. |      Name       | Institute |
-| :--: | :-------------: | :-------: |
-|  1   | Achintya Kumar  |   NITK    |
-|  2   | Vaibhav Pratap  |   NITK    |
-|  3   |     Akshaya     |   NITK    |
-|  4   | Anusha B Salian |   NITK    |
 
-### Content Developers:
+
+###  Developers:
 
 | SNo. |         Name          | Institute |
 | :--: | :-------------------: | :-------: |
-|  1   |    Ranjan Tunga S     |   NITK    |
-|  2   |    Rohit Kushwaha     |   NITK    |
+|  1   | GANESH B   |   MIT, Chennai    |
+|  2   | Shivarama Naveen |   NITK    |
 |  3   |    Nagaraj Kamath     |   NITK    |
-|  4   |      Vishwas A S      |   NITK    |
-|  5   | Steevan Loyd Sequeira |   NITK    |
+|  4  |     Shwetha     |   NITK    |
+|  5   |     Akshaya     |   NITK    |
+|  6  | Anusha B Salian |   NITK    |
