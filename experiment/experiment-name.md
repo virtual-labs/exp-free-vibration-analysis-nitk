@@ -1,1 +1,1 @@
-## Experiment name
+## Free Vibration Analysis of 2 DOF Undamped System
