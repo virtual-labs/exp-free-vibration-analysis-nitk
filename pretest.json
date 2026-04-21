@@ -1,0 +1,90 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Systems that require two independent coordinates to describe their motion are called:",
+      "answers": {
+        "a": "Single DOF",
+        "b": "Two DOF",
+        "c": "Multiple DOF",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "a": "Correct answer is (b).Single Degree of Freedom (DOF) systems require only one independent coordinate to fully describe their motion.",
+        "b": "Correct answer is (b). Two Degrees of Freedom (DOF) systems require two independent coordinates (e.g., two linear displacements, two angles, or a combination) to fully describe the motion of all parts of the system.",
+        "c": "Correct answer is (b).Multiple Degrees of Freedom (DOF) systems require more than two independent coordinates to fully describe their motion.",
+        "d": "Correct answer is (b)."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Complete the statement: For the two DOF free vibration without damping_______",
+      "answers": {
+        "a": "The masses are excited by harmonic force F(t)",
+        "b": "The masses are excited by impulse excitation",
+        "c": "The masses are excited by initial excitation",
+        "d": "none of the above"
+      },
+      "explanations": {
+        "a": "Correct answer is (c).Harmonic force F(t) implies forced vibration, where an external periodic force drives the system's motion.",
+        "b": "Correct answer is (c).Impulse excitation is a transient force that gives the system an initial momentum, leading to free vibration afterwards, but the free vibration itself is characterized by the initial conditions.",
+        "c": "Correct answer is (c). Free vibration occurs when a system is set into motion by an initial excitation (e.g., initial displacement or velocity) and then allowed to oscillate without any external forces acting on it.",
+        "d": "Correct answer is (c)."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Under certain condition, any point in the system may execute harmonic vibrations at any of the two natural frequencies, and these are known as:",
+      "answers": {
+        "a": "Principal mode of vibrations",
+        "b": "Star mode of vibrations",
+        "c": "Secondary mode of vibrations",
+        "d": "Tertiary mode of vibrations"
+      },
+      "explanations": {
+        "a": "Correct answer is (a). Principal modes of vibration (also known as normal modes or natural modes) are specific patterns of motion in which all parts of the system oscillate harmonically with the same frequency. For a two DOF system, there are typically two principal modes, each associated with a natural frequency.",
+        "b": "Correct answer is (a). This is not a standard term used in vibration analysis.",
+        "c": "Correct answer is (a). While there might be secondary aspects to vibrations, the fundamental harmonic patterns at natural frequencies are called principal modes.",
+        "d": "Correct answer is (a). This term is generally used for systems with three or more degrees of freedom when referring to a third mode, not applicable as the primary term for harmonic vibrations at natural frequencies in a two DOF system."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "A system having two degrees of freedom can vibrate in:",
+      "answers": {
+        "a": "One principal modes of vibrations",
+        "b": "Two principal modes of vibrations",
+        "c": "Three principal modes of vibrations",
+        "d": "Multiple principal modes of vibrations"
+      },
+      "explanations": {
+        "a": "Correct answer is (b). A system with two degrees of freedom will have two natural frequencies and corresponding principal modes of vibration, so it can vibrate in more than one principal mode.",
+        "b": "Correct answer is (b). For each degree of freedom, there is a corresponding principal mode of vibration. Therefore, a two DOF system has two principal modes.",
+        "c": "Correct answer is (b). A system with three degrees of freedom would typically have three principal modes of vibration.",
+        "d": "Correct answer is (b). While a system can exhibit a combination of modes, the fundamental number of distinct principal modes is equal to the number of degrees of freedom."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The guess solution regarding the solutions for x<sub>1</sub> and x<sub>2</sub> in 2 DOF free vibrations are:",
+      "answers": {
+        "a": "x<sub>1</sub> = X<sub>1</sub> sin &omega;t ; x<sub>2</sub> = X<sub>2</sub> sin &omega;t",
+        "b": "&theta;<sub>1</sub> = &beta;<sub>1</sub> sin &omega;t ; &theta;<sub>2</sub> = &beta;<sub>2</sub> sin &omega;t",
+        "c": " x<sub>1</sub> = A<sub>1</sub> e<sup>st</sup> ; x<sub>2</sub> = A<sub>2</sub> e<sup>st</sup> ",
+        "d": "x = X sin &omega;t ; &theta; = &beta; sin &omega;t"
+      },
+      "explanations": {
+        "a": "Correct answer is (a). In the analysis of free vibrations of a 2 DOF system, we often assume a harmonic solution where both masses oscillate at the same frequency (&omega;) but with potentially different amplitudes (X<sub>1</sub> and X<sub>2</sub>). The sine function (or cosine) represents this harmonic motion.",
+        "b": "Correct answer is (a). This form of solution is typically used for rotational degrees of freedom (&theta; representing angular displacement and &beta; representing angular amplitude). While a 2 DOF system could involve rotations, the question specifically asks about x<sub>1</sub> and x<sub>2</sub>, which usually denote linear displacements.",
+        "c": "Correct answer is (a). This form of solution (exponential) is more general and used when considering damped vibrations or finding the characteristic equation. For undamped free vibration, the sinusoidal form is a direct assumption based on the expected oscillatory behavior.",
+        "d": "Correct answer is (a). This is a more general form that could represent a 2 DOF system with one linear (x) and one rotational (&theta;) degree of freedom. The question focuses on two linear displacements (x<sub>1</sub> and x<sub>2</sub>)."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+  ]
+}

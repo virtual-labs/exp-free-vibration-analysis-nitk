@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOLVE - Two Degree of Freedom System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/query.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <link rel="stylesheet" href="css/MOMstyle.css" /> -->
+    <script
+      defer
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://code.jquery.com/ui/1.8.17/jquery-ui.min.js"
+    ></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script defer src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <!-- <script type="text/javascript" src="js/MOMscript.js"></script> -->
+
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="js/p5.js"
+    ></script>
+    <script language="javascript" src="js/p5.dom.js"></script>
+    <script language="javascript" src="js/p5.gui.js"></script>
+    <script language="javascript" src="js/quicksettings.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/
+jquery.ui.touch-punch.min.js"
+    ></script>
+    <!-- <script
+  defer
+  type="text/javascript"
+  src="js/jquery.ui.touch-punch.js"
+></script> -->
+    <script
+      defer
+      language="javascript"
+      type="text/javascript"
+      src="js/script.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="js/sketch.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="js/system.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="js/graph.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="js/dynamic_graphs.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="js/Input.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="js/buttonIcon.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="js/page0.js"
+    ></script>
+
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="js/page1.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="js/page2.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="js/page3.js"
+    ></script>
+   
+  </head>
+
+  <body>
+    <div class="container">
+    <div class="title-div-container">
+      <div class="title-div">
+        <div class="logo-div">
+          <a href="#"
+            ><img src="images/logo_nitk.png" alt="Logo" class="logo"
+          /></a>
+        </div>
+        <h1>Free Vibration Analysis of 2 DOF Undamped System</h1>
+      </div>
+    </div>
+      <div class="sidebar">
+        <ul class="tool-menu">
+          <li class="tool-list">
+            <a
+              href="#simulation"
+              class="tool-link"
+              title="Simulation"
+              ontouchstart="window.location.href = '#simulation';"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#089B93"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#ffffff"
+                class="icons"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 8.25V18a2.25 2.25 0 002.25 2.25h13.5A2.25 2.25 0 0021 18V8.25m-18 0V6a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6zM7.5 6h.008v.008H7.5V6zm2.25 0h.008v.008H9.75V6z"/>
+                </svg></a>
+            <span>Simulation</span>
+          </li>
+          <li class="tool-list">
+            <a
+              href="#variables"
+              class="tool-link"
+              title="Variables"
+              ontouchstart="window.location.href = '#variables';"
+              ><svg
+                id="variables1"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#ffffff"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#089B93"
+                class="icons"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.745 3A23.933 23.933 0 003 12c0 3.183.62 6.22 1.745 9M19.5 3c.967 2.78 1.5 5.817 1.5 9s-.533 6.22-1.5 9M8.25 8.885l1.444-.89a.75.75 0 011.105.402l2.402 7.206a.75.75 0 001.104.401l1.445-.889m-8.25.75l.213.09a1.687 1.687 0 002.062-.617l4.45-6.676a1.688 1.688 0 012.062-.618l.213.09"
+                /></svg></a>
+            <span>Variables</span>
+          </li>
+          <li class="tool-list">
+            <a
+              href="#Results"
+              class="tool-link"
+              title="Results"
+              id="Title-results"
+              ontouchstart="window.location.href = '#Results';"
+              ><svg
+                id="Results1"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#089B93"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#ffffff"
+                class="icons"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                /></svg></a>
+            <span id="taskResult1">Results</span>
+          </li>
+
+          <li class="tool-list graph-div">
+            <div class="tool-list--two">
+              <img
+                id="screenchangesbackward"
+                title="Previous"
+                onclick="changePage(-1)"
+                ontouchstart="changePage(-1)"
+                src="images/bluebkdulls.svg"
+                alt=""
+                class="icons graph graph-one display-hide"
+              />
+              <img
+                id="screenchangesforward"
+                title="Next"
+                onclick="changePage(1)"
+                ontouchstart="changePage(1)"
+                src="images/bluefkwdulls.svg"
+                alt=""
+                class="icons graph graph-two display-hide"
+              />
+            </div>
+            <span></span>
+          </li>
+          <li class="tool-list">
+            <img
+              id="playpausebutton"
+              onclick="simstate()"
+              ontouchstart="simstate()"
+              title="Play/Pause"
+              src="images/bluepausedull.svg"
+              alt=""
+              class="icons"
+              style="display: none"/>
+            <span class="playPause" style="display: none">Pause</span>
+          </li>
+        </ul>
+      </div>
+      <div class="main">
+        <div class="main-section">
+          <div id="simulation" class="main__task-div">
+            <h3 class="task-title">Simulation</h3>
+            <div class="canvas__div">
+              <div id="canvas-container">
+                <!-- <canvas id="simscreen" height="400px" width="550px"></canvas> -->
+              </div>
+              <!-- <button id="cleargraph" onclick="clearMe()" ontouchstart="clearMe()">Clear graph</button>            -->
+              <!-- <div id="titleincanvas"></div> -->
+              <div id="observations">
+                <p class="ob1"></p>
+                <p class="ob2"></p>
+                <p class="ob3"></p>
+                <p class="ob4"></p>
+                <p class="ob5"></p>
+                <p class="ob6"></p>
+              </div>
+              <!-- <div id="datatable1"></div>
+              <div id="datatable2"></div>
+              <div id="scale"></div> -->
+
+              <!-- Region for comment / question prompts -->
+              <!-- <div id="commentboxleft"></div>
+              <div id="commentboxright"></div> -->
+            </div>
+          </div>
+          <div id="variables" class="main__task-div">
+            <div class="settings-sections">
+              <h3 class="task-title">Variables</h3>
+              <div class="variables-sections">
+                <div class="var-div">
+                  <div class="input-container">
+                    <label for="Xo1Spinner">X<sub>o1</sub></label>
+
+                    <input
+                      class="var-spinner"
+                      id="Xo1Spinner"
+                      name="value"
+                      readonly
+                    />
+                    <span>m</span>
+                  </div>
+                  <div class="var-slider" id="Xo1Slider"></div>
+                </div>
+                <div class="var-div">
+                  <div class="input-container">
+                    <label for="Xo2Spinner">X<sub>o2</sub></label>
+                    <!-- <input class="var-spinner" type="number" id="Xo2Spinner" name="value" /> -->
+                    <input
+                      class="var-spinner"
+                      id="Xo2Spinner"
+                      name="value"
+                      readonly
+                    />
+                    <span>m</span>
+                  </div>
+                  <div class="var-slider" id="Xo2Slider"></div>
+                </div>
+                <div class="var-div">
+                  <div class="input-container">
+                    <label for="k1Spinner">k<sub>1</sub></label>
+                    <input
+                      class="var-spinner"
+                      id="k1Spinner"
+                      name="value"
+                      type="number"
+                      readonly
+                    />
+                    <span>N/m</span>
+                  </div>
+                  <div class="var-slider" id="k1Slider"></div>
+                </div>
+                <div class="var-div">
+                  <div class="input-container">
+                    <label for="m1Spinner">m<sub>1</sub></label>
+                    <input
+                      class="var-spinner"
+                      id="m1Spinner"
+                      name="value"
+                      type="number"
+                      readonly
+                    />
+                    <span>kg</span>
+                  </div>
+                  <div class="var-slider" id="m1Slider"></div>
+                </div>
+                <div class="var-div">
+                  <div class="input-container">
+                    <label for="k2Spinner">k<sub>2</sub></label>
+                    <input
+                      class="var-spinner"
+                      id="k2Spinner"
+                      name="value"
+                      type="number"
+                      ontouchstart=""
+                      readonly
+                    />
+                    <span>N/m</span>
+                  </div>
+                  <div class="var-slider" id="k2Slider"></div>
+                </div>
+                <div class="var-div">
+                  <div class="input-container">
+                    <label for="m2Spinner">m<sub>2</sub></label>
+                    <input
+                      class="var-spinner"
+                      id="m2Spinner"
+                      name="value"
+                      type="number"
+                      ontouchstart=""
+                      readonly
+                    />
+                    <span>kg</span>
+                  </div>
+                  <div class="var-slider" id="m2Slider"></div>
+                </div>
+              </div>
+            </div>
+            <button
+              id="var-top"
+              class="btn btn-top hide"
+              title="Move to Top"
+              onclick="movetoTop()"
+              ontouchstart="movetoTop"
+            >
+              ↑
+            </button>
+          </div>
+          <div id="Results" class="main__task-div">
+            <h3 id="taskResult" class="task-title">Results</h3>
+            <div class="settings-sections">
+              <div class="comment-sections">
+                <p id="p1">m<sub>v</sub> is the mass of the vehicle</p>
+                <p id="p2">m<sub>r</sub> is the mass of the rider</p>
+                <p id="p3">m<sub>w</sub> is the mass of the wheel</p>
+                <p id="p4">
+                  k<sub>s</sub> and k<sub>t</sub> are the stiffness of the strut
+                  and tire
+                </p>
+                <p id="p5">(a) A Physical Model</p>
+                <p id="p6">(b) Mathematical Model as 2 DOF System</p>
+
+                <p id="p7">ω<sub>1</sub> = <span id="w1"></span></p>
+                <p id="p8">ω<sub>2</sub> = <span id="w2"></span></p>
+                <p id="p9">Mode 1 = <span id="m1"></span></p>
+                <p id="p10">Mode 2 =<span id="m2"></span></p>
+              </div>
+            </div>
+            <button
+              class="btn btn-top hide"
+              title="Move to Top"
+              onclick="movetoTop()"
+              ontouchstart="movetoTop"
+            >
+              ↑
+            </button>
+          </div>
+          <div class="main__task-div footer">
+            <p>Copyright © SOLVE The Virtual Lab @ NITK Surathkal</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script src="../assets/js/iframeResize.js"></script>
+        
+        </body>
+</html>
