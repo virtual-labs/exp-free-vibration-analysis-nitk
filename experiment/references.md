@@ -11,7 +11,12 @@
 <li>Theory of Vibrations with Applications by William T Thomson, Marie Dillon Dahleh and Chandramouli Padmanabhan</li>
 </ol>
 </td>
-<td>Developer : Dr. K V Gangadharan | NITK</br></br>
+<td>Developers:<br/> 
+  <ul style="list-style-type: none;">
+ <li>Dr. K V Gangadharan | NITK</li> 
+ <li>Dr. Jeyaraj P | NITK</li>
+  </ul>
+</br>
 Contributors :
 <ul style="list-style-type: none;">
 <li> GANESH B | 2019507016 | MIT, Chennai </li>
